@@ -17,7 +17,7 @@ remote_theme: raviriley/agency-jekyll-theme
 url    : "juergennigg.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : Test Config
+title      : Jürgen Nigg Photography
 email      : hello@juergennigg.com #this is also the email contact forms will go to
 description: "Agency Bootstrap theme converted to a Jekyll theme, plus new features: Google Analytics, Markdown support, custom pages, and more!"
 author     : my Name
