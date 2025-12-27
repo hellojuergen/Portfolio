@@ -14,22 +14,13 @@ en: &DEFAULT_EN
     title: Juergen Nigg Photography
     text: Welcome to my Portfolio
     button: Explore
-    buttonlink: "#services"
+    buttonlink: "#portfolio"
 
   services:
-    title: "Services"
-    text: "Fields of work"
-    section: services
-    list:
-      - title: "Sports"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Commercial"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
-        icon: fab fa-markdown
+    title: ""
+    text: ""
+    section: ""
+    list: []
 
   portfolio:
     title: "Portfolio"
