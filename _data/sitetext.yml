@@ -14,7 +14,7 @@ en: &DEFAULT_EN
     title: Juergen Nigg Photography
     text: Welcome to my Portfolio
     button: Explore
-    buttonlink: "#Portfolio"
+    buttonlink: "#portfolio"
 
   services:
     title: "Services"
@@ -32,8 +32,8 @@ en: &DEFAULT_EN
         icon: fab fa-markdown
 
   portfolio:
-    title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    title: ""
+    text: ""
     section: portfolio
     closebutton: "Close Project"
 
