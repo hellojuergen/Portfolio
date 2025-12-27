@@ -81,7 +81,7 @@ en: &DEFAULT_EN
     list:
       - title: "Aster"
         url: https://youraster.com/en
-        logo: assets/img/clients/aster-logo.png
+        logo: assets/img/clients/aster-logo.jpg
       - title: "MOG Film GmbH"
         url: https://www.martinvenier.com/
         logo: assets/img/clients/mog-logo.png
