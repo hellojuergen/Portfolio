@@ -1,9 +1,0 @@
-/* Project override: hide unwanted sections without changing templates */
-#services,
-#timeline,
-#team {
-  display: none !important;
-}
-
-/* keep spacing consistent for pages when sections removed */
-.page-section { padding-top: 0; padding-bottom: 0; }
