@@ -22,7 +22,7 @@ email      : hello@juergennigg.com #this is also the email contact forms will go
 description: "Juergen Nigg Photography / Art / Portfolio"
 author     : my Name
 logo:     #optional, defaults to site title
-   path: assets\img\logo-white.jpg
+   path: assets\img\logo-white.png
    height: 60 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
