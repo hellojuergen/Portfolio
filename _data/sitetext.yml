@@ -18,13 +18,13 @@ en: &DEFAULT_EN
 
   services:
     title: "Services"
-    text: "Lorem ipsum"
+    text: "Fields of work"
     section: services
     list:
-      - title: "E-Commerce"
+      - title: "Sports"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
+      - title: "Commercial"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"

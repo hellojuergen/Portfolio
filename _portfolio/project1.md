@@ -1,6 +1,6 @@
 ---
-title: Project Threads
-subtitle: subtitle lorem ipsum dolor sit amet consectetur.
+title: Your Aster
+subtitle: Commercial Shooting
 image: assets/img/portfolio/01-full.jpg
 alt: Shirts on a hanger
 
