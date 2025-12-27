@@ -79,18 +79,24 @@ en: &DEFAULT_EN
     max-height: 100px
     horizontal-scrolling: "" #"yes/no"
     list:
-      - title: "envato"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
+      - title: "Aster"
+        url: https://youraster.com/en
+        logo: assets/img/clients/aster-logo.png
+      - title: "MOG Film GmbH"
+        url: https://www.martinvenier.com/
+        logo: assets/img/clients/mog-logo.png
+      - title: "Prime Skiing"
+        url: https://prime-skiing.de/
+        logo: assets/img/clients/primeskiing-logo.png
       - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
+        url: https://www.prolicht.at/de
+        logo: assets/img/clients/prolicht-logo.png
+      - title: "Stoke Six Agency"
+        url: https://www.stokesix.com/
+        logo: assets/img/clients/stokesix-logo.png
+      - title: "Suru Studios"
+        url: https://surustudios.com/de
+        logo: assets/img/clients/suru-logo.png
 
   team:
     title: "OUR AMAZING TEAM"
