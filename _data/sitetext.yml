@@ -14,7 +14,7 @@ en: &DEFAULT_EN
     title: Juergen Nigg Photography
     text: Welcome to my Portfolio
     button: Explore
-    buttonlink: "#services"
+    buttonlink: "#Portfolio"
 
   services:
     title: "Services"
