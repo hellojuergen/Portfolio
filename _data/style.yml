@@ -4,7 +4,7 @@
 #black: "#000"
 
 #Image Customization
-header-image: "../img/header.png"
+header-image: "../img/header_sunrise.jpg"
 contact-image: "../img/contact.png"
 #Font Awesome icon for portfolio grid when an item is hovered over
 #portfolio-icon: fas fa-expand-arrows-alt fa-3x #default: fas fa-plus fa-3x
@@ -15,6 +15,7 @@ fonts_urls:
     - "https://fonts.googleapis.com/css?family=Kaushan+Script"
     - "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
     - "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    - "https://fonts.googleapis.com/css2?family=Noto+Serif:wght@150&display=swap"
 
 # Set custom fonts
 fonts:
@@ -22,7 +23,7 @@ fonts:
     for: "heading"
   - name: "Kaushan Script"
     for: "script"
-  - name: "Droid Serif"
+  - name: "Noto Serif"
     for: "serif"
   - name: "Roboto Slab"
     for: "body"
