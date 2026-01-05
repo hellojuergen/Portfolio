@@ -16,13 +16,13 @@ theme: jekyll-agency
 url    : "juergennigg.com" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: "" # the subpath of your site, e.g. /blog
 
-title      : Jürgen Nigg Photography
+title      : Jürgen Nigg
 email      : hello@juergennigg.com #this is also the email contact forms will go to
 description: "Juergen Nigg Photography and Art Portfolio"
 author     : Jürgen Nigg
 logo:     #optional, defaults to site title
-   path: assets\img\clients\logo-white.png
-   height: 40 #height in px, defaults to 52px
+   path: assets/img/logo-white.png
+   height: 35 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 
@@ -31,6 +31,7 @@ analytics:
 
 collections:
   portfolio:
+  art:
 
 markdown: kramdown
 
