@@ -92,11 +92,10 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: #000000;
 }
 #mainNav .navbar-toggler {
   font-size: 12px;
-  right: 0;
   padding: 13px;
   text-transform: uppercase;
   color: white;
@@ -145,7 +144,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: #000000;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -280,7 +279,7 @@ header.masthead .intro-text .intro-heading {
   z-index: 2;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
@@ -338,7 +337,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #212529;
+  background-color: #000000;
 }
 .portfolio-modal .close-modal .lr .rl {
   /* Safari and Chrome */
@@ -349,7 +348,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  background-color: #212529;
+  background-color: #000000;
 }
 
 #art .art-item {
@@ -472,7 +471,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #212529;
+  background-color: #000000;
 }
 .art-modal .close-modal .lr .rl {
   /* Safari and Chrome */
@@ -483,7 +482,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  background-color: #212529;
+  background-color: #000000;
 }
 
 .timeline {
@@ -672,7 +671,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
+  background-color: #000000;
   background-image: url("../img/contact.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -725,10 +724,8 @@ ul.social-buttons li a {
   color: white;
   border-radius: 100%;
   outline: none;
-  background-color: #212529;
+  background-color: #000000;
 }
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
-
-/*# sourceMappingURL=agency.css.map */

@@ -1,12 +1,12 @@
 ---
 caption: #what displays in the portfolio grid:
   title: Burano
-  subtitle: Creative
+  subtitle: Experimental
   thumbnail: assets/img/portfolio/Burano.jpg
   
 #what displays when the item is clicked:
 title: Burano
-subtitle: Creative
+subtitle: Experimental
 image: assets/img/portfolio/Burano.jpg #main image, can be a link or a file in assets/img/portfolio
 alt: image alt text
 

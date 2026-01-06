@@ -12,13 +12,13 @@
 en: &DEFAULT_EN
   header:
     title: Portfolio
-    text: Juergen Nigg Photography
-    button: Explore
+    text: Juergen Nigg
+    button: 
     buttonlink: "#portfolio"
 
   portfolio:
-    title: "Photography"
-    text: "Explore some of my work"
+    title: "Work"
+    text: "Following projects represent my journey through experimentation, passion projects, and professional work. Each is an exploration of ideas, challenges, and solutions coming together in unique ways."
     section: portfolio
     closebutton: "Close Project"
 
@@ -44,9 +44,9 @@ en: &DEFAULT_EN
         logo: assets/img/clients/suru-logo.png
 
   about:
-    title: "About Us"
-    text: "our story"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    title: "About Me"
+    text: "Who I am and what I do"
+    body: "I’m passionate about creativity, design, and exploring new tools. My experience spans marketing planning, online campaign management, media production, and social media, with hands-on expertise in event management, overseeing POS marketing production from prototyping to execution, and coordinating international projects. <br><br> I enjoy experimenting with creative software like Adobe, CAD, and recently HTML, always looking for ways to combine ideas, technology, and visual thinking. <br><br> Off the clock, I chase inspiration outdoors, in art, and in the everyday adventures of fatherhood."
     section: about
 
   art:
@@ -62,16 +62,10 @@ en: &DEFAULT_EN
   footer:
     legal: "Privacy Policy"
     social:
-      - url: https://twitter.com
-        icon: "fab fa-twitter"
-      - url: https://facebook.com
-        icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
-        icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
-      - url: https://instagram.com
+      - url: https://www.instagram.com/juergennigg/
         icon: "fab fa-instagram"
+      - url: https://www.linkedin.com/in/juergennigg/
+        icon: "fab fa-linkedin-in"
 
 en-001: #English (World)
   <<: *DEFAULT_EN
