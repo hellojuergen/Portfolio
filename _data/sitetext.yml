@@ -46,7 +46,7 @@ en: &DEFAULT_EN
   about:
     title: "About Me"
     text: "Who I am and what I do"
-    body: "I’m passionate about creativity, design, and exploring new tools. My experience spans marketing planning, online campaign management, media production, and social media, with hands-on expertise in event management, overseeing POS marketing production from prototyping to execution, and coordinating international projects. <br><br> I enjoy experimenting with creative software like Adobe, CAD, and recently HTML, always looking for ways to combine ideas, technology, and visual thinking. <br><br> Off the clock, I chase inspiration outdoors, in art, and in the everyday adventures of fatherhood."
+    body: "I’m passionate about creativity, design, and exploring new tools. My experience spans marketing planning, online campaign management, media production, and social media, with hands-on expertise in event management, overseeing POS marketing production from prototyping to execution, and coordinating international projects. <br><br> I enjoy experimenting with creative software like Adobe and CAD, and have recently started exploring programming, always looking for ways to combine ideas, technology, and visual thinking. <br><br> Off the clock, I chase inspiration outdoors, in art, and in the everyday adventures of fatherhood."
     section: about
 
   art:
