@@ -28,19 +28,19 @@ en: &DEFAULT_EN
     horizontal-scrolling: "" #"yes/no"
     list:
       - title: "Aster"
-        url: https://youraster.com/
+        url: 
         logo: assets/img/clients/aster-logo.jpg
       - title: "MOG"
-        url: https://www.martinvenier.com/
+        url: 
         logo: assets/img/clients/mog-logo.png
       - title: "Prime-Skiing.de"
-        url: https://prime-skiing.de/
+        url: 
         logo: assets/img/clients/primeskiing-logo.png
       - title: "Prolicht"
-        url: https://www.prolicht.at/de/
+        url: 
         logo: assets/img/clients/prolicht-logo.png
       - title: "Suru Studios"
-        url: https://surustudios.com/de
+        url: 
         logo: assets/img/clients/suru-logo.png
 
   about:
