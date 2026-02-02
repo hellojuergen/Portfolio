@@ -22,9 +22,7 @@ That's trust been taken, <br>
 and prejudice awaken.
 
 
-Series:
-Where do we go, where do we come from. 
-<br>
+Series: Where do we go, where do we come from. 
 Print / Hahnemühle Fine Art Baryta / 50x75cm 
 
 {:.list-inline}
