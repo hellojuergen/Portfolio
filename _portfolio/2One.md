@@ -12,15 +12,16 @@ caption:
 
 A fierce Mouth - seductive Lips, <br>
 attributes to be rich. 
-<br><br>
+
 Thunderous - inverse to her tone, <br>
 caught in a triangle of monochrome.
-<br><br>
+
 Standing in blue, labeled - but not true.<br>
 Naked below. a Human.  
-<br>
+
 Vulnurable.
-<br><br>
+
+
 Series: Where do we go, where do we come from.
 
 Print / Hahnemühle Fine Art Baryta / 60x90cm 
