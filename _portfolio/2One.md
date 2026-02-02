@@ -22,6 +22,7 @@ Naked below. a Human.
 Vulnurable.
 
 
+<br>
 Series: Where do we go, where do we come from.
 
 Print / Hahnemühle Fine Art Baryta / 60x90cm 
