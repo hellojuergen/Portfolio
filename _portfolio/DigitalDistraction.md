@@ -19,7 +19,6 @@ The digital revolution made it more or less secretly socially acceptable. Distur
 What is real?
 
 Series: Where do we go, where do we come from.
- 
 Print / Hahnemühle Fine Art Baryta / 50x75cm 
 
 {:.list-inline}
