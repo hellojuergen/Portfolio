@@ -18,9 +18,9 @@ caught in a triangle of monochrome.
 <br><br>
 Standing in blue, labeled - but not true.<br>
 Naked below. a Human.  
-<br><br>
+<br>
 Vulnurable.
-
+<br><br>
 Series: Where do we go, where do we come from.
 
 Print / Hahnemühle Fine Art Baryta / 60x90cm 
