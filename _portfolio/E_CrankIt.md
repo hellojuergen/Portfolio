@@ -1,12 +1,12 @@
 ---
 title: CrankIt
-subtitle: Phhotography
+subtitle: Sports
 image: assets/img/portfolio/20190416_Ehrwald_CrankIt_Juergen Nigg_02.jpg
-alt: Documentary
+alt: Sports
 
 caption:
   title: CrankIt
-  subtitle: Documentary
+  subtitle: Sports
   thumbnail: assets/img/portfolio/20190416_Ehrwald_CrankIt_Juergen Nigg_02.jpg
 ---
 

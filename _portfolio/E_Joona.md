@@ -16,4 +16,4 @@ It’s all about the shadows. Captured Joona Kangas at the Skyline Park Nordkett
 
 - Date: 02-20
 - Client: Private Project
-- Category: Sports Photography
+- Category: Photography

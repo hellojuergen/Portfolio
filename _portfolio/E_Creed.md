@@ -1,12 +1,12 @@
 ---
 title: X-Games
-subtitle: Documentary
+subtitle: Sports
 image: assets/img/portfolio/Creed.jpg
-alt: Keep Exploring
+alt: Corey Creed
 
 caption:
   title: X-Games
-  subtitle: Documentary
+  subtitle: Sports
   thumbnail: assets/img/portfolio/Creed.jpg
 ---
 
@@ -16,4 +16,4 @@ At X-Games Norway, I was on site to shoot a documentary about an upcoming athlet
 
 - Date: 08-19
 - Client: Private
-- Category: Documentary
+- Category: Photography
