@@ -1,12 +1,12 @@
 ---
 title: Burano
-subtitle: Experimental
+subtitle: Travel
 image: assets/img/portfolio/Burano.jpg #main image, can be a link or a file in assets/img/portfolio
 alt: Travel
 
 caption: #what displays in the portfolio grid:
   title: Burano
-  subtitle: Experimental
+  subtitle: Travel
   thumbnail: assets/img/portfolio/Burano.jpg
 
 
