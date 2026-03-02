@@ -2,7 +2,7 @@
 title: 2ONE
 subtitle: Artwork
 image: assets/img/portfolio/2ONE.jpg
-alt: Keep Exploring
+alt: Yooneek.art
 
 caption:
   title: 2ONE
