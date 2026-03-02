@@ -1,12 +1,12 @@
 ---
 title: Verena for Aster
-subtitle: Fashion Photography
+subtitle: Fashion
 image: assets/img/portfolio/20230602_Verena_03 (©Jürgen Nigg).jpg
 alt: Fashion Photography
 
 caption:
   title: Verena for Aster
-  subtitle: Fashion Photography
+  subtitle: Fashion 
   thumbnail: assets/img/portfolio/20230602_Verena_03 (©Jürgen Nigg).jpg
 ---
 

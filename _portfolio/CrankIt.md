@@ -6,7 +6,7 @@ alt: Documentary
 
 caption:
   title: Crank It
-  subtitle: Photography
+  subtitle: Documentary
   thumbnail: assets/img/portfolio/20190416_Ehrwald_CrankIt_Juergen Nigg_02.jpg
 ---
 

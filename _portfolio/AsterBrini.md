@@ -1,12 +1,12 @@
 ---
 title: Jungle Fever
-subtitle: Fashion Photography
+subtitle: Fashion
 image: assets/img/portfolio/20220826_Commercial_Aster_BotGart_5304 x 7952_01 (©Jürgen Nigg).jpg
 alt: Keep Exploring
 
 caption:
   title: Jungle Fever
-  subtitle: Fashion Photography
+  subtitle: Fashion 
   thumbnail: assets/img/portfolio/20220826_Commercial_Aster_BotGart_5304 x 7952_01 (©Jürgen Nigg).jpg
 ---
 

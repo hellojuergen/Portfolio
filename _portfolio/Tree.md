@@ -2,7 +2,7 @@
 title: Father & Son
 subtitle: Experimental
 image: assets/img/portfolio/Tree.jpg
-alt: Keep Exploring
+alt: Experimental
 
 caption:
   title: Father & Son

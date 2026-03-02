@@ -1,12 +1,12 @@
 ---
 title: Sardinia Sunrise
-subtitle: Travel Photography
+subtitle: Travel 
 image: assets/img/portfolio/20230912_Sardinien_13_5_(©Jürgen Nigg).jpg
-alt: Travel Photography
+alt: Travel 
 
 caption:
   title: Sardinia Sunrise
-  subtitle: Travel Photography
+  subtitle: Travel 
   thumbnail: assets/img/portfolio/20230912_Sardinien_13_5_(©Jürgen Nigg).jpg
 ---
 

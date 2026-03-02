@@ -2,7 +2,7 @@
 title: Super(ri)or
 subtitle: Artwork
 image: assets/img/portfolio/Superior.jpg
-alt: Keep Exploring
+alt: Artwork
 
 caption:
   title: Super(ri)or
