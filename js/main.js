@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const grid = document.getElementById('portfolio-grid');
-    const filterBtns = document.querySelectorAll('.filter-btn');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
@@ -16,43 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    let currentFilter = 'animals';
     let currentImageIndex = 0;
-    let displayedItems = 9;
-    let filteredItems = [];
+    let displayedItems = 12;
 
     // Initialize Portfolio
     function initPortfolio() {
-        renderPortfolio(currentFilter);
+        console.log('Initialisiere Portfolio mit', portfolioItems.length, 'Bildern');
+        renderPortfolio();
         setupEventListeners();
     }
 
     // Render Portfolio Items
-    function renderPortfolio(filter = 'all', itemsToShow = displayedItems) {
+    function renderPortfolio(itemsToShow = displayedItems) {
         grid.innerHTML = '';
         
-        // Filter items
-        if (filter === 'show-all') {
-            filteredItems = portfolioItems;
-        } else {
-            filteredItems = portfolioItems.filter(item => 
-                item.category.includes(filter)
-            );
-        }
-
-        // Show only specified number of items
-        const itemsToRender = filteredItems.slice(0, itemsToShow);
+        // Show items
+        const itemsToRender = portfolioItems.slice(0, itemsToShow);
+        
+        console.log('Zeige', itemsToRender.length, 'von', portfolioItems.length, 'Bildern');
         
         itemsToRender.forEach((item, index) => {
             const gridItem = createGridItem(item, index);
             grid.appendChild(gridItem);
         });
 
-        // Apply masonry layout
-        applyMasonryLayout();
-
         // Show/hide load more button
-        if (filteredItems.length <= itemsToShow) {
+        if (portfolioItems.length <= itemsToShow) {
             loadMoreBtn.style.display = 'none';
         } else {
             loadMoreBtn.style.display = 'block';
@@ -71,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
                  onerror="this.src='./assets/img/placeholder.jpg'">
             <div class="grid-item-overlay">
                 <h3 class="grid-item-title">${item.title}</h3>
-                <span class="grid-item-category">${item.category[0]}</span>
             </div>
         `;
 
@@ -80,25 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return div;
     }
 
-    // Apply Masonry Layout
-    function applyMasonryLayout() {
-        // Auto-rows are handled by CSS grid
-        // This function can be extended for more complex layouts
-    }
-
-    // Filter Functionality
+    // Setup Event Listeners
     function setupEventListeners() {
-        // Filter buttons
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFilter = btn.dataset.filter;
-                displayedItems = 9; // Reset displayed items
-                renderPortfolio(currentFilter, displayedItems);
-            });
-        });
-
         // Lightbox
         lightboxClose.addEventListener('click', closeLightbox);
         lightboxPrev.addEventListener('click', showPrevImage);
@@ -120,24 +90,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Load more
         loadMoreBtn.addEventListener('click', () => {
             displayedItems += 6;
-            renderPortfolio(currentFilter, displayedItems);
+            renderPortfolio(displayedItems);
         });
 
         // Hamburger menu
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
 
         // Newsletter form
         const newsletterForm = document.getElementById('newsletter-form');
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = e.target.querySelector('input').value;
-            // Hier Newsletter-Integration hinzufügen
-            alert(`Vielen Dank für Ihre Anmeldung: ${email}`);
-            e.target.reset();
-        });
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = e.target.querySelector('input').value;
+                alert(`Vielen Dank für Ihre Anmeldung: ${email}`);
+                e.target.reset();
+            });
+        }
 
         // Smooth scroll for nav links
         document.querySelectorAll('.nav-link').forEach(link => {
@@ -157,13 +130,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox Functions
     function openLightbox(index) {
         currentImageIndex = index;
-        const item = filteredItems[index];
+        const item = portfolioItems[index];
         
         lightboxImg.src = item.image;
         lightboxTitle.textContent = item.title;
         lightboxDescription.textContent = item.description;
-        lightboxCategory.textContent = item.category.join(', ');
         lightboxDate.textContent = item.date;
+        
+        // Verstecke Kategorie-Feld
+        if (lightboxCategory) {
+            lightboxCategory.style.display = 'none';
+        }
         
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -175,12 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showPrevImage() {
-        currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length;
+        currentImageIndex = (currentImageIndex - 1 + portfolioItems.length) % portfolioItems.length;
         openLightbox(currentImageIndex);
     }
 
     function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % filteredItems.length;
+        currentImageIndex = (currentImageIndex + 1) % portfolioItems.length;
         openLightbox(currentImageIndex);
     }
 
@@ -199,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe grid items
+    // Observe grid items after rendering
     setTimeout(() => {
         document.querySelectorAll('.grid-item').forEach(item => {
             observer.observe(item);
@@ -209,22 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     initPortfolio();
 });
-
-// Lazy loading optimization
-if ('IntersectionObserver' in window) {
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src;
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    lazyImages.forEach(img => imageObserver.observe(img));
-}
 
 // Performance: Debounce function
 function debounce(func, wait) {
@@ -238,8 +199,3 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-
-// Resize handler
-window.addEventListener('resize', debounce(() => {
-    // Re-apply layout on resize if needed
-}, 250));
