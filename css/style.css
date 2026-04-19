@@ -160,40 +160,10 @@ body {
     padding: 0 2rem;
 }
 
-/* Filter Section */
+/* Portfolio Section */
 .portfolio-section {
     padding: 4rem 0;
     min-height: 100vh;
-}
-
-.filter-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
-}
-
-.filter-btn {
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    color: var(--text-gray);
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
-    font-family: 'Inter', sans-serif;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--text-light);
-    color: var(--bg-dark);
-    border-color: var(--text-light);
-    transform: translateY(-2px);
 }
 
 /* Masonry Grid */
@@ -546,15 +516,6 @@ body {
     .masonry-grid {
         grid-template-columns: 1fr;
         gap: 15px;
-    }
-    
-    .filter-container {
-        gap: 0.5rem;
-    }
-    
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
     }
     
     .hero {
