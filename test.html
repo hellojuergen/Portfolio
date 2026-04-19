@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Test</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="portfolio-section">
+        <div class="container">
+            <h1 style="text-align: center; color: white; margin-bottom: 2rem;">Portfolio</h1>
+            
+            <!-- Masonry Grid -->
+            <div class="masonry-grid" id="portfolio-grid">
+                <!-- Items werden dynamisch geladen -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn-load-more">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">
+            <i class="fas fa-times"></i>✕
+        </button>
+        <button class="lightbox-prev" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>‹
+        </button>
+        <button class="lightbox-next" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>›
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="lightbox-meta">
+                    <span id="lightbox-category"></span>
+                    <span id="lightbox-date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Data INLINE -->
+    <script>
+    const portfolioItems = [
+        {
+            id: 1,
+            title: "Beispielbild 1",
+            image: "https://picsum.photos/800/1000",
+            description: "Schönes Landschaftsfoto",
+            date: "2025-12",
+            gridRowSpan: 35
+        },
+        {
+            id: 2,
+            title: "Beispielbild 2",
+            image: "https://picsum.photos/800/600",
+            description: "Kreatives Porträt",
+            date: "2025-11",
+            gridRowSpan: 25
+        },
+        {
+            id: 3,
+            title: "Beispielbild 3",
+            image: "https://picsum.photos/800/1200",
+            description: "Architektur Fotografie",
+            date: "2025-10",
+            gridRowSpan: 40
+        },
+        {
+            id: 4,
+            title: "Beispielbild 4",
+            image: "https://picsum.photos/800/900",
+            description: "Natur und Umwelt",
+            date: "2025-09",
+            gridRowSpan: 30
+        },
+        {
+            id: 5,
+            title: "Beispielbild 5",
+            image: "https://picsum.photos/800/700",
+            description: "Street Photography",
+            date: "2025-08",
+            gridRowSpan: 28
+        },
+        {
+            id: 6,
+            title: "Beispielbild 6",
+            image: "https://picsum.photos/800/1100",
+            description: "Künstlerische Komposition",
+            date: "2025-07",
+            gridRowSpan: 38
+        }
+    ];
+    </script>
+
+    <!-- Main JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

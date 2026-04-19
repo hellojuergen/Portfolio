@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentImageIndex = 0;
     let displayedItems = 12;
-    let filteredItems = portfolioItems;
 
     // Initialize Portfolio
     function initPortfolio() {
+        console.log('Initialisiere Portfolio mit', portfolioItems.length, 'Bildern');
         renderPortfolio();
         setupEventListeners();
     }
@@ -29,22 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPortfolio(itemsToShow = displayedItems) {
         grid.innerHTML = '';
         
-        // Always show all items (no filtering)
-        filteredItems = portfolioItems;
-
-        // Show only specified number of items
-        const itemsToRender = filteredItems.slice(0, itemsToShow);
+        // Show items
+        const itemsToRender = portfolioItems.slice(0, itemsToShow);
+        
+        console.log('Zeige', itemsToRender.length, 'von', portfolioItems.length, 'Bildern');
         
         itemsToRender.forEach((item, index) => {
             const gridItem = createGridItem(item, index);
             grid.appendChild(gridItem);
         });
 
-        // Apply masonry layout
-        applyMasonryLayout();
-
         // Show/hide load more button
-        if (filteredItems.length <= itemsToShow) {
+        if (portfolioItems.length <= itemsToShow) {
             loadMoreBtn.style.display = 'none';
         } else {
             loadMoreBtn.style.display = 'block';
@@ -69,12 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         div.addEventListener('click', () => openLightbox(index));
         
         return div;
-    }
-
-    // Apply Masonry Layout
-    function applyMasonryLayout() {
-        // Auto-rows are handled by CSS grid
-        // This function can be extended for more complex layouts
     }
 
     // Setup Event Listeners
@@ -104,20 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Hamburger menu
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
 
         // Newsletter form
         const newsletterForm = document.getElementById('newsletter-form');
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = e.target.querySelector('input').value;
-            // Hier Newsletter-Integration hinzufügen
-            alert(`Vielen Dank für Ihre Anmeldung: ${email}`);
-            e.target.reset();
-        });
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = e.target.querySelector('input').value;
+                alert(`Vielen Dank für Ihre Anmeldung: ${email}`);
+                e.target.reset();
+            });
+        }
 
         // Smooth scroll for nav links
         document.querySelectorAll('.nav-link').forEach(link => {
@@ -137,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox Functions
     function openLightbox(index) {
         currentImageIndex = index;
-        const item = filteredItems[index];
+        const item = portfolioItems[index];
         
         lightboxImg.src = item.image;
         lightboxTitle.textContent = item.title;
@@ -145,7 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxDate.textContent = item.date;
         
         // Verstecke Kategorie-Feld
-        lightboxCategory.style.display = 'none';
+        if (lightboxCategory) {
+            lightboxCategory.style.display = 'none';
+        }
         
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -157,12 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showPrevImage() {
-        currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length;
+        currentImageIndex = (currentImageIndex - 1 + portfolioItems.length) % portfolioItems.length;
         openLightbox(currentImageIndex);
     }
 
     function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % filteredItems.length;
+        currentImageIndex = (currentImageIndex + 1) % portfolioItems.length;
         openLightbox(currentImageIndex);
     }
 
@@ -181,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe grid items
+    // Observe grid items after rendering
     setTimeout(() => {
         document.querySelectorAll('.grid-item').forEach(item => {
             observer.observe(item);
@@ -191,22 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     initPortfolio();
 });
-
-// Lazy loading optimization
-if ('IntersectionObserver' in window) {
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src;
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    lazyImages.forEach(img => imageObserver.observe(img));
-}
 
 // Performance: Debounce function
 function debounce(func, wait) {
@@ -220,8 +199,3 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-
-// Resize handler
-window.addEventListener('resize', debounce(() => {
-    // Re-apply layout on resize if needed
-}, 250));
