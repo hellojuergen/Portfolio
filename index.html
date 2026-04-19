@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jürgen's Portfolio - Fotografie, Design und kreative Arbeiten">
+    <meta name="keywords" content="Portfolio, Fotografie, Design, Landschaft, Porträt, Tiere">
+    <meta name="author" content="Jürgen">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jürgen's Portfolio">
+    <meta property="og:description" content="Kreative Fotografie und Design">
+    <meta property="og:image" content="./assets/img/social-preview.jpg">
+    
+    <title>Jürgen's Portfolio</title>
+    
+    <!-- Preload wichtige Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <div class="logo-circle">J</div>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#pages" class="nav-link">Pages</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#extra" class="nav-link">Extra</a></li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="hero-title">Kreative Visionen</h1>
+            <p class="hero-subtitle">Fotografie & Design Portfolio</p>
+        </div>
+    </section>
+
+    <!-- Filter & Grid Section -->
+    <section class="portfolio-section" id="works">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn" data-filter="show-all">Show all</button>
+                <button class="filter-btn active" data-filter="animals">Animals</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="colors">Colors</button>
+                <button class="filter-btn" data-filter="bw">B&W</button>
+                <button class="filter-btn" data-filter="adv">Adv</button>
+                <button class="filter-btn" data-filter="editorial">Editorial</button>
+                <button class="filter-btn" data-filter="man">Man</button>
+                <button class="filter-btn" data-filter="woman">Woman</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="masonry-grid" id="portfolio-grid">
+                <!-- Items werden dynamisch geladen -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn-load-more">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" id="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="lightbox-meta">
+                    <span id="lightbox-category"></span>
+                    <span id="lightbox-date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.behance.net/yourprofile" target="_blank" class="social-icon" title="Behance">
+            <i class="fab fa-behance"></i>
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon" title="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://pinterest.com/yourprofile" target="_blank" class="social-icon" title="Pinterest">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        <a href="https://dribbble.com/yourprofile" target="_blank" class="social-icon" title="Dribbble">
+            <i class="fab fa-dribbble"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>hello@juergen-portfolio.com</p>
+                    <p>+43 XXX XXX XXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Ihre E-Mail" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jürgen Portfolio. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/portfolio-data.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
