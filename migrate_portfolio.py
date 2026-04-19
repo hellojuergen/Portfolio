@@ -257,7 +257,6 @@ class PortfolioMigrator:
             js_item = {
                 'id': idx,
                 'title': item['title'],
-                'category': categories,
                 'image': image_path,
                 'description': item.get('description', '')[:200],  # Kürzen
                 'date': date_str,
