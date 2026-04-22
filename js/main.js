@@ -1,12 +1,9 @@
-// Main JavaScript für Portfolio
 document.addEventListener('DOMContentLoaded', () => {
-    // Elements
     const grid = document.getElementById('portfolio-grid');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
     const lightboxDescription = document.getElementById('lightbox-description');
-    const lightboxCategory = document.getElementById('lightbox-category');
     const lightboxDate = document.getElementById('lightbox-date');
     const lightboxClose = document.getElementById('lightbox-close');
     const lightboxPrev = document.getElementById('lightbox-prev');
@@ -18,130 +15,114 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentImageIndex = 0;
     let displayedItems = 12;
 
-    // Initialize Portfolio
     function initPortfolio() {
-        console.log('Initialisiere Portfolio mit', portfolioItems.length, 'Bildern');
         renderPortfolio();
         setupEventListeners();
     }
 
-    // Render Portfolio Items
     function renderPortfolio(itemsToShow = displayedItems) {
         grid.innerHTML = '';
-        
-        // Show items
         const itemsToRender = portfolioItems.slice(0, itemsToShow);
-        
-        console.log('Zeige', itemsToRender.length, 'von', portfolioItems.length, 'Bildern');
-        
         itemsToRender.forEach((item, index) => {
-            const gridItem = createGridItem(item, index);
-            grid.appendChild(gridItem);
+            grid.appendChild(createGridItem(item, index));
         });
-
-        // Show/hide load more button
-        if (portfolioItems.length <= itemsToShow) {
-            loadMoreBtn.style.display = 'none';
-        } else {
-            loadMoreBtn.style.display = 'block';
-        }
+        loadMoreBtn.style.display = portfolioItems.length <= itemsToShow ? 'none' : 'block';
     }
 
-    // Create Grid Item
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(String(str)));
+        return div.innerHTML;
+    }
+
     function createGridItem(item, index) {
         const div = document.createElement('div');
         div.className = 'grid-item';
-        div.style.gridRowEnd = `span ${item.gridRowSpan}`;
+        div.style.gridRowEnd = `span ${item.gridRowSpan || 30}`;
         div.dataset.index = index;
-        
         div.innerHTML = `
-            <img src="${item.image}" alt="${item.title}" loading="lazy" 
-                 onerror="this.src='./assets/img/placeholder.jpg'">
+            <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy"
+                 onerror="this.style.display='none'">
             <div class="grid-item-overlay">
-                <h3 class="grid-item-title">${item.title}</h3>
+                <h3 class="grid-item-title">${escapeHtml(item.title)}</h3>
             </div>
         `;
-
         div.addEventListener('click', () => openLightbox(index));
-        
         return div;
     }
 
-    // Setup Event Listeners
     function setupEventListeners() {
-        // Lightbox
         lightboxClose.addEventListener('click', closeLightbox);
         lightboxPrev.addEventListener('click', showPrevImage);
         lightboxNext.addEventListener('click', showNextImage);
-        
+
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
-            
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') showPrevImage();
             if (e.key === 'ArrowRight') showNextImage();
         });
 
-        // Load more
         loadMoreBtn.addEventListener('click', () => {
             displayedItems += 6;
             renderPortfolio(displayedItems);
         });
 
-        // Hamburger menu
-        if (hamburger) {
+        if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
         }
 
-        // Newsletter form
-        const newsletterForm = document.getElementById('newsletter-form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = e.target.querySelector('input').value;
-                alert(`Vielen Dank für Ihre Anmeldung: ${email}`);
-                e.target.reset();
-            });
-        }
-
-        // Smooth scroll for nav links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
+                if (href && href.startsWith('#')) {
                     e.preventDefault();
                     const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
     }
 
-    // Lightbox Functions
     function openLightbox(index) {
         currentImageIndex = index;
         const item = portfolioItems[index];
-        
+
         lightboxImg.src = item.image;
+        lightboxImg.alt = item.title;
+
+        // Titel + Subtitle
         lightboxTitle.textContent = item.title;
-        lightboxDescription.textContent = item.description;
-        lightboxDate.textContent = item.date;
-        
-        // Verstecke Kategorie-Feld
-        if (lightboxCategory) {
-            lightboxCategory.style.display = 'none';
+
+        const subtitle = document.getElementById('lightbox-subtitle');
+        if (subtitle) subtitle.textContent = item.subtitle || '';
+
+        // Beschreibung: \n → <br> für korrekte Zeilenumbrüche
+        if (item.description) {
+            lightboxDescription.innerHTML = item.description
+                .split('\n')
+                .map(line => line === '' ? '<br>' : escapeHtml(line))
+                .join('<br>');
+        } else {
+            lightboxDescription.innerHTML = '';
         }
-        
+
+        // Meta: Client + Datum
+        const meta = document.getElementById('lightbox-meta');
+        if (meta) {
+            const parts = [];
+            if (item.client) parts.push(`<span>${escapeHtml(item.client)}</span>`);
+            if (item.date)   parts.push(`<span>${escapeHtml(item.date)}</span>`);
+            meta.innerHTML = parts.join('<span class="meta-sep">·</span>');
+        }
+
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -149,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = 'auto';
+        lightboxImg.src = '';
     }
 
     function showPrevImage() {
@@ -161,12 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openLightbox(currentImageIndex);
     }
 
-    // Scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -174,28 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Observe grid items after rendering
     setTimeout(() => {
-        document.querySelectorAll('.grid-item').forEach(item => {
-            observer.observe(item);
-        });
+        document.querySelectorAll('.grid-item').forEach(item => observer.observe(item));
     }, 100);
 
-    // Initialize
     initPortfolio();
 });
-
-// Performance: Debounce function
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
