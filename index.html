@@ -3,81 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jürgen Nigg Portfolio - Fotografie, Design und kreative Arbeiten">
-    <meta name="keywords" content="Portfolio, Fotografie, Design, Landschaft, Porträt">
-    <meta name="author" content="Jürgen Nigg">
-    
-    <!-- Open Graph / Social Media -->
+    <meta name="description" content="Portfolio – Fotografie & Design">
+    <meta name="author" content="Jürgen">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
-    <meta property="og:description" content="Kreative Fotografie und Design">
-    <meta property="og:image" content="./assets/img/social-preview.jpg">
-    
-    <title>Jürgen's Portfolio</title>
-    
-    <!-- Preload wichtige Fonts -->
+    <meta property="og:description" content="Fotografie & Design">
+    <meta property="og:image" content="./assets/img/portfolio/social-preview.jpg">
+
+    <title>Jürgen Nigg – Portfolio</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- Logo -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <div class="logo-circle">J</div>
-                </a>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#pages" class="nav-link">Pages</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#works" class="nav-link">Works</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#shop" class="nav-link">Shop</a></li>
-                <li><a href="#extra" class="nav-link">Extra</a></li>
-            </ul> 
-
-            <!-- Hamburger Menu -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <a href="index.html" class="nav-logo">
+                <div class="logo-circle">J</div>
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
         <div class="container">
-            <h1 class="hero-title">Licht. Schatten. Gefühl. Kunst.</h1>
-               <p class="hero-subtitle">Creative Project Portfolio</p>
-        </div>
-    </section>
-
-    <!-- Filter & Grid Section -->
-    <section class="portfolio-section" id="works">
-        <div class="container">
-            <!-- Masonry Grid -->
-            <div class="masonry-grid" id="portfolio-grid">
-                <!-- Items werden dynamisch geladen -->
-            </div>
-
-            <!-- Load More Button -->
+            <div class="masonry-grid" id="portfolio-grid"></div>
             <div class="load-more-container">
                 <button class="btn-load-more">Load More</button>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
+    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightbox-close">
             <i class="fas fa-times"></i>
@@ -93,64 +64,47 @@
             <div class="lightbox-info">
                 <h3 id="lightbox-title"></h3>
                 <p id="lightbox-description"></p>
-                <div class="lightbox-meta">
-                    <span id="lightbox-category"></span>
-                    <span id="lightbox-date"></span>
-                </div>
+                <span id="lightbox-date"></span>
             </div>
         </div>
     </div>
 
     <!-- Social Sidebar -->
     <div class="social-sidebar">
-        <a href="https://www.behance.net/yourprofile" target="_blank" class="social-icon" title="Behance">
+        <a href="https://www.behance.net/yourprofile" target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance">
             <i class="fab fa-behance"></i>
         </a>
-        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon" title="Twitter">
-            <i class="fab fa-twitter"></i>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+            <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://pinterest.com/yourprofile" target="_blank" class="social-icon" title="Pinterest">
+        <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-icon" title="Pinterest">
             <i class="fab fa-pinterest"></i>
         </a>
-        <a href="https://dribbble.com/yourprofile" target="_blank" class="social-icon" title="Dribbble">
-            <i class="fab fa-dribbble"></i>
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon" title="LinkedIn">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>hello@juergennigg.com</p>
-                    <p>+43 699 1987 27 11</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Social Media</h4>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Newsletter</h4>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <input type="email" placeholder="Ihre E-Mail" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Jürgen Portfolio. Alle Rechte vorbehalten.</p>
-            </div>
+        <div class="footer-bottom">
+            <p id="contact-mail" style="margin-bottom:0.4rem;"></p>
+            <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+        // E-Mail bot-geschützt (nicht im Klartext im HTML)
+        const u = 'hello', d = 'juergennigg.com';
+        const el = document.getElementById('contact-mail');
+        if (el) {
+            const link = document.createElement('a');
+            link.href = 'mailto:' + u + '@' + d;
+            link.textContent = u + '@' + d;
+            link.style.color = 'var(--text-gray)';
+            el.appendChild(link);
+        }
+    </script>
 
     <script src="./js/portfolio-data.js"></script>
     <script src="./js/main.js"></script>
