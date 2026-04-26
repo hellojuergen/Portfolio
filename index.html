@@ -39,10 +39,18 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Licht. Schatten.<br>Gefühl. Kunst.</h1>
-            <p>Fotografie &amp; Artwork — Jürgen Nigg</p>
-            <a href="#works" class="hero-scroll">
-                <i class="fas fa-arrow-down"></i>
+            <span class="hero-badge">Fotografie &amp; Artwork</span>
+            <h1>Licht.<br>Schatten.<br>Gefühl.</h1>
+            <p class="hero-sub">Jürgen Nigg — Innsbruck, Austria</p>
+            <div class="hero-stats">
+                <div class="hero-stat"><span class="hero-stat-num">18</span><span class="hero-stat-label">Werke</span></div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat"><span class="hero-stat-num">8</span><span class="hero-stat-label">Jahre</span></div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label">Länder</span></div>
+            </div>
+            <a href="#works" class="hero-cta">
+                Portfolio ansehen <i class="fas fa-arrow-down"></i>
             </a>
         </div>
     </section>
@@ -96,6 +104,29 @@
             a.href='mailto:'+u+'@'+d;
             a.textContent=u+'@'+d;
             el.appendChild(a);
+        })();
+
+        // Social Sidebar: nie den Footer überlappen
+        (function(){
+            var sidebar = document.querySelector('.social-sidebar');
+            var footer  = document.querySelector('.footer');
+            if(!sidebar || !footer) return;
+            function adjustSidebar(){
+                var footerTop = footer.getBoundingClientRect().top;
+                var winH      = window.innerHeight;
+                var sidebarH  = sidebar.offsetHeight;
+                var gap       = 24; // px Abstand zur Linie
+                if(footerTop < winH){
+                    // Footer ist sichtbar — Icons nach oben schieben
+                    var overlap = winH - footerTop;
+                    sidebar.style.bottom = (overlap + gap) + 'px';
+                } else {
+                    sidebar.style.bottom = '2rem';
+                }
+            }
+            window.addEventListener('scroll', adjustSidebar, {passive:true});
+            window.addEventListener('resize', adjustSidebar, {passive:true});
+            adjustSidebar();
         })();
     </script>
     <script src="js/portfolio-data.js"></script>

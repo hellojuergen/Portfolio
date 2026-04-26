@@ -151,5 +151,21 @@
 
     <script src="js/wallpapers-data.js"></script>
     <script src="js/wallpapers.js"></script>
+    <script>
+        // Social Sidebar: nie den Footer überlappen
+        (function(){
+            var sidebar = document.querySelector('.social-sidebar');
+            var footer  = document.querySelector('.wp-footer-cta');
+            if(!sidebar || !footer) return;
+            function adjust(){
+                var ft = footer.getBoundingClientRect().top;
+                var wh = window.innerHeight;
+                sidebar.style.bottom = ft < wh ? (wh - ft + 24) + 'px' : '2rem';
+            }
+            window.addEventListener('scroll', adjust, {passive:true});
+            window.addEventListener('resize', adjust, {passive:true});
+            adjust();
+        })();
+    </script>
 </body>
 </html>

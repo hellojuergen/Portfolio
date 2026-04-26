@@ -81,68 +81,67 @@ body {
 
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
     text-align: center;
-    background: linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
+    padding: 8rem 2rem 5rem;
+    background: radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.035) 0%, transparent 65%),
+                linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 100%);
     overflow: hidden;
-}
-
-/* subtiles Hintergrundmuster */
-.hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 50% 40%, rgba(255,255,255,0.04) 0%, transparent 65%);
-    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
-    display: flex; flex-direction: column; align-items: center; gap: 1.2rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    max-width: 680px;
+}
+
+.hero-badge {
+    display: inline-block; padding: 0.35rem 1.1rem;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 50px; font-size: 0.75rem;
+    letter-spacing: 0.1em; color: var(--gray);
+    margin-bottom: 2rem; text-transform: uppercase;
 }
 
 .hero-content h1 {
-    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-size: clamp(3rem, 9vw, 7rem);
     font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.08;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #fff 0%, #666 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.hero-content p {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    color: var(--gray);
-    font-weight: 300;
-    letter-spacing: 0.04em;
+.hero-sub {
+    font-size: 0.9rem; color: var(--gray);
+    font-weight: 300; letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
 }
 
-.hero-scroll {
-    margin-top: 1.5rem;
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 44px; height: 44px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    color: var(--gray);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: var(--transition);
-    animation: bounce 2s ease-in-out infinite;
+.hero-stats {
+    display: flex; align-items: center; justify-content: center;
+    gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;
 }
-.hero-scroll:hover {
+.hero-stat { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.hero-stat-num   { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+.hero-stat-label { font-size: 0.68rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.08em; }
+.hero-stat-div   { width: 1px; height: 32px; background: rgba(255,255,255,0.1); }
+
+.hero-cta {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    padding: 0.85rem 2rem;
     background: var(--white); color: var(--bg);
-    border-color: var(--white);
-    animation: none;
+    border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+    text-decoration: none; transition: var(--transition);
 }
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(6px); }
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(255,255,255,0.12);
 }
 
 /* ── PORTFOLIO GRID ───────────────────────────────────────── */
@@ -273,16 +272,13 @@ body {
 .lightbox-next:hover { background: rgba(255,255,255,0.18); }
 
 /* ── SOCIAL SIDEBAR ───────────────────────────────────────── */
-/*
-   Wichtig: position: fixed — bleibt immer im Viewport,
-   bottom: 50% + transform verhindert Überlappung mit Footer
-*/
 .social-sidebar {
     position: fixed;
     left: 1.5rem;
-    bottom: 2rem;          /* fixes Abstand zum unteren Rand */
+    bottom: 2rem;          /* JS passt dies dynamisch an */
     z-index: 99;
     display: flex; flex-direction: column; gap: 0.6rem;
+    transition: bottom 0.2s ease;
 }
 
 .social-icon {
