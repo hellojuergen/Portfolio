@@ -13,5 +13,12 @@ const wallpapers = [
     { id:12, title:"Burano Pink",           subtitle:"Minimal · Burano",    file:"jn-burano-pink-portrait-2k.jpg",           format:"portrait",  resolution:"2K", dimensions:"1441 × 2160" },
     { id:13, title:"Burano Red",            subtitle:"Minimal · Burano",    file:"jn-burano-red-portrait-2k.jpg",            format:"portrait",  resolution:"2K", dimensions:"1441 × 2160" },
     { id:14, title:"Burano Yellow",         subtitle:"Minimal · Burano",    file:"jn-burano-yellow-portrait-2k.jpg",         format:"portrait",  resolution:"2K", dimensions:"1441 × 2160" },
-    { id:15, title:"Malta Split",           subtitle:"Statement · Malta",   file:"jn-malta-split-panorama-8k.jpg",           format:"panorama",  resolution:"8K", dimensions:"8000 × 3428" },
+    { id:15, title:"Malta Split",           subtitle:"Statement · Malta",      file:"jn-malta-split-panorama-8k.jpg",           format:"panorama",  resolution:"8K", dimensions:"8000 × 3428" },
+    { id:16, title:"Bird",                  subtitle:"B&W · Wildlife",         file:"jn-bird-bw-landscape-2k.jpg",              format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:17, title:"Colour",                subtitle:"Sunset · Landscape",     file:"jn-colour-sunset-landscape-2k.jpg",        format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:18, title:"Sardinia Sunset",       subtitle:"Travel · Sardinia",      file:"jn-sardinia-sunset-landscape-2k.jpg",      format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:19, title:"Sardinia Ocean",        subtitle:"Travel · Sardinia",      file:"jn-sardinia-ocean-landscape-2k.jpg",       format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:20, title:"Sardinia Sky I",        subtitle:"Travel · Sardinia",      file:"jn-sardinia-sky-i-landscape-2k.jpg",       format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:21, title:"Sardinia Sky II",       subtitle:"Travel · Sardinia",      file:"jn-sardinia-sky-ii-landscape-2k.jpg",      format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
+    { id:22, title:"Sardinia Sky III",      subtitle:"Travel · Sardinia",      file:"jn-sardinia-sky-iii-landscape-2k.jpg",     format:"landscape", resolution:"2K", dimensions:"2160 × 1440" },
 ];
