@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Wallpapers – Jürgen Nigg</title>
-    <meta name="description" content="Kostenlose Desktop & Mobile Wallpapers. Hochauflösend, gratis, jeden Monat neu.">
+    <meta name="description" content="Kostenlose Wallpapers von Jürgen Nigg. 2K & 8K. Gratis herunterladen.">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -25,7 +25,10 @@
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Portfolio</a>
-                <a href="wallpapers.html" class="nav-link nav-link-cta active"><i class="fas fa-download"></i> Wallpapers</a>
+                <a href="wallpapers.html" class="nav-link nav-link-cta active">
+                    <i class="fas fa-download"></i> Wallpapers
+                </a>
+                <a href="blog.html" class="nav-link">Blog</a>
             </div>
         </div>
     </nav>
@@ -35,61 +38,68 @@
         <div class="wp-hero-content">
             <span class="wp-badge">Free Download</span>
             <h1>Dein Bildschirm.<br>Deine Stimmung.</h1>
-            <p class="wp-hero-sub">Hochauflösende Wallpapers — Landscape, Portrait & Panorama.<br>Kostenlos herunterladen, kein Account nötig.</p>
+            <p class="wp-hero-sub">Hochauflösende Wallpapers — Landscape, Portrait &amp; Panorama.<br>Kostenlos. Kein Account. Kein Spam.</p>
             <div class="wp-hero-stats">
-                <div class="wp-stat"><span class="wp-stat-num">15</span><span class="wp-stat-label">Wallpapers</span></div>
+                <div class="wp-stat">
+                    <span class="wp-stat-num">15</span>
+                    <span class="wp-stat-label">Wallpapers</span>
+                </div>
                 <div class="wp-stat-div"></div>
-                <div class="wp-stat"><span class="wp-stat-num">2K–8K</span><span class="wp-stat-label">Auflösung</span></div>
+                <div class="wp-stat">
+                    <span class="wp-stat-num">2K–8K</span>
+                    <span class="wp-stat-label">Auflösung</span>
+                </div>
                 <div class="wp-stat-div"></div>
-                <div class="wp-stat"><span class="wp-stat-num" id="total-downloads">0</span><span class="wp-stat-label">Downloads</span></div>
+                <div class="wp-stat">
+                    <span class="wp-stat-num" id="total-downloads">0</span>
+                    <span class="wp-stat-label">Downloads</span>
+                </div>
                 <div class="wp-stat-div"></div>
-                <div class="wp-stat"><span class="wp-stat-num">0€</span><span class="wp-stat-label">Für immer</span></div>
-            </div>
-            <a href="#wallpapers" class="wp-cta-btn"><i class="fas fa-arrow-down"></i> Jetzt herunterladen</a>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="wp-lead">
-        <div class="wp-lead-inner" id="wp-lead-inner">
-            <div class="wp-lead-text">
-                <i class="fas fa-envelope-open-text wp-lead-icon"></i>
-                <div>
-                    <h3>Neue Wallpapers. Jeden Monat.</h3>
-                    <p>Trag dich ein und bekomm als Erstes neue Releases und Behind-the-Scenes.</p>
+                <div class="wp-stat">
+                    <span class="wp-stat-num">0€</span>
+                    <span class="wp-stat-label">Für immer</span>
                 </div>
             </div>
-            <form class="wp-lead-form" id="wp-lead-form">
-                <input type="email" id="wp-email" placeholder="deine@email.com" required autocomplete="email">
-                <button type="submit"><span>Eintragen</span> <i class="fas fa-arrow-right"></i></button>
-            </form>
+            <a href="#wallpapers" class="wp-cta-btn">
+                <i class="fas fa-arrow-down"></i> Jetzt herunterladen
+            </a>
         </div>
-        <div class="wp-lead-success" id="wp-lead-success"><i class="fas fa-check-circle"></i><p>Danke! Du bist dabei.</p></div>
     </section>
 
     <!-- Gallery -->
     <section class="wp-gallery" id="wallpapers">
         <div class="container">
+
+            <!-- Format Tabs -->
             <div class="wp-controls">
                 <div class="wp-format-tabs">
                     <button class="wp-tab active" data-format="all">Alle</button>
-                    <button class="wp-tab" data-format="landscape"><i class="fas fa-desktop"></i> Landscape</button>
-                    <button class="wp-tab" data-format="portrait"><i class="fas fa-mobile-alt"></i> Portrait</button>
-                    <button class="wp-tab" data-format="panorama"><i class="fas fa-panorama"></i> Panorama</button>
+                    <button class="wp-tab" data-format="landscape">
+                        <i class="fas fa-desktop"></i> Landscape
+                    </button>
+                    <button class="wp-tab" data-format="portrait">
+                        <i class="fas fa-mobile-alt"></i> Portrait
+                    </button>
+                    <button class="wp-tab" data-format="panorama">
+                        <i class="fas fa-panorama"></i> Panorama
+                    </button>
                 </div>
             </div>
+
+            <!-- Grid mit Thumbnails -->
             <div class="wp-grid" id="wp-grid"></div>
+
         </div>
     </section>
 
-    <!-- License -->
+    <!-- Lizenz -->
     <section class="wp-license">
         <div class="container">
             <div class="wp-license-inner">
                 <i class="fas fa-info-circle wp-license-icon"></i>
                 <div>
-                    <h4>Lizenz & Nutzung</h4>
-                    <p>Alle Wallpapers sind für den <strong>persönlichen, nicht-kommerziellen Gebrauch</strong> freigegeben. Weiterverkauf, Bearbeitung und kommerzielle Nutzung sind nicht gestattet. © Jürgen Nigg.</p>
+                    <h4>Lizenz &amp; Nutzung</h4>
+                    <p>Alle Wallpapers sind für den <strong>persönlichen, nicht-kommerziellen Gebrauch</strong> freigegeben. Desktop- und Mobilhintergrund: erlaubt. Weiterverkauf, Bearbeitung und kommerzielle Nutzung: nicht gestattet. © Jürgen Nigg.</p>
                 </div>
             </div>
         </div>
@@ -98,8 +108,8 @@
     <!-- Footer CTA -->
     <section class="wp-footer-cta">
         <div class="container">
-            <h3>Gefällt dir die Arbeit?</h3>
-            <p>Portfolio ansehen oder auf Instagram folgen.</p>
+            <h3>Mehr entdecken</h3>
+            <p>Das vollständige Portfolio oder Instagram für neue Projekte.</p>
             <div class="wp-footer-btns">
                 <a href="index.html" class="wp-outline-btn"><i class="fas fa-images"></i> Portfolio</a>
                 <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="wp-outline-btn"><i class="fab fa-instagram"></i> Instagram</a>
@@ -110,7 +120,7 @@
     <!-- Social Sidebar -->
     <div class="social-sidebar">
         <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.behance.net/jrgennigg" target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
+        <a href="https://www.behance.net/jrgennigg"       target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
         <a href="https://www.linkedin.com/in/juergennigg" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
 
@@ -118,12 +128,22 @@
     <div class="wp-overlay" id="wp-overlay">
         <div class="wp-modal">
             <button class="wp-modal-close" id="wp-overlay-close"><i class="fas fa-times"></i></button>
-            <img src="" alt="" id="wp-overlay-img">
+
+            <!-- Vorschau groß -->
+            <div class="wp-modal-preview">
+                <img src="" alt="" id="wp-overlay-img">
+            </div>
+
+            <!-- Info + Download -->
             <div class="wp-modal-info">
-                <p class="wp-modal-sub" id="wp-overlay-subtitle"></p>
+                <p class="wp-modal-sub"  id="wp-overlay-subtitle"></p>
                 <h3 id="wp-overlay-title"></h3>
                 <p class="wp-modal-quality" id="wp-overlay-quality"></p>
-                <a href="#" id="wp-dl-btn" class="wp-dl-main-btn" download><i class="fas fa-download"></i> Kostenlos herunterladen</a>
+
+                <a href="#" id="wp-dl-btn" class="wp-dl-main-btn" download>
+                    <i class="fas fa-download"></i> Herunterladen
+                </a>
+
                 <p class="wp-modal-license">© Jürgen Nigg — Nur für persönliche Nutzung</p>
             </div>
         </div>

@@ -12,7 +12,6 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,10 +28,24 @@
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Portfolio</a>
-                <a href="wallpapers.html" class="nav-link nav-link-cta"><i class="fas fa-download"></i> Wallpapers</a>
+                <a href="wallpapers.html" class="nav-link nav-link-cta">
+                    <i class="fas fa-download"></i> Wallpapers
+                </a>
+                <a href="blog.html" class="nav-link">Blog</a>
             </div>
         </div>
     </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Licht. Schatten.<br>Gefühl. Kunst.</h1>
+            <p>Fotografie &amp; Artwork — Jürgen Nigg</p>
+            <a href="#works" class="hero-scroll">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
 
     <!-- Portfolio Grid -->
     <section class="portfolio-section" id="works">
@@ -47,8 +60,8 @@
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
-        <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox-prev"  id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next"  id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
         <div class="lightbox-content">
             <img src="" alt="" id="lightbox-img">
             <div class="lightbox-info">
@@ -61,24 +74,29 @@
         </div>
     </div>
 
-    <!-- Social Sidebar -->
+    <!-- Social Sidebar — fixed, immer sichtbar -->
     <div class="social-sidebar">
         <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.behance.net/jrgennigg" target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
+        <a href="https://www.behance.net/jrgennigg"       target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
         <a href="https://www.linkedin.com/in/juergennigg" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-bottom">
-            <p id="contact-mail"></p>
-            <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
-        </div>
+        <p id="contact-mail"></p>
+        <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
     </footer>
 
     <script>
-        var u='hello',d='juergennigg.com',el=document.getElementById('contact-mail');
-        if(el){var a=document.createElement('a');a.href='mailto:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='#666';el.appendChild(a);}
+        // E-Mail bot-geschützt
+        (function(){
+            var u='hello',d='juergennigg.com',el=document.getElementById('contact-mail');
+            if(!el)return;
+            var a=document.createElement('a');
+            a.href='mailto:'+u+'@'+d;
+            a.textContent=u+'@'+d;
+            el.appendChild(a);
+        })();
     </script>
     <script src="js/portfolio-data.js"></script>
     <script src="js/main.js"></script>
