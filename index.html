@@ -3,126 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jürgen Nigg — Fotografie, Artwork & Design Portfolio">
+    <title>Jürgen Nigg – Portfolio | Fotografie &amp; Artwork Innsbruck</title>
+    <meta name="description" content="Jürgen Nigg – Fotograf und Künstler aus Innsbruck, Tirol. Portfolio mit Landschafts-, Reise-, Sport- und Fashion-Fotografie sowie zeitgenössischem Artwork.">
     <meta name="author" content="Jürgen Nigg">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Jürgen Nigg – Portfolio">
-    <meta property="og:description" content="Fotografie, Artwork & Design">
-    <title>Jürgen Nigg – Portfolio</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://juergennigg.com/">
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://juergennigg.com/">
+    <meta property="og:title"       content="Jürgen Nigg – Portfolio | Fotografie &amp; Artwork">
+    <meta property="og:description" content="Fotograf und Künstler aus Innsbruck. Landschaft, Reise, Sport, Fashion, zeitgenössisches Artwork.">
+    <meta property="og:image"       content="https://juergennigg.com/assets/img/portfolio/juergen-nigg-nockspitze-summit-cross-night-fog-tyrol.jpg">
+    <meta property="og:locale"      content="de_AT">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Jürgen Nigg – Portfolio">
+    <meta name="twitter:description" content="Fotograf und Künstler aus Innsbruck. Landschaft, Reise, Sport, Fashion, Artwork.">
+    <meta name="twitter:image"       content="https://juergennigg.com/assets/img/portfolio/juergen-nigg-nockspitze-summit-cross-night-fog-tyrol.jpg">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-Frame-Options"        content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy"        content="strict-origin-when-cross-origin">
+    <!-- Resource Hints -->
+    <link rel="preconnect"   href="https://fonts.googleapis.com">
+    <link rel="preconnect"   href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/img/logo-white.png" as="image" fetchpriority="high">
+    <link rel="preload" href="css/style.css" as="style">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome — non-render-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jürgen Nigg","url":"https://juergennigg.com","jobTitle":"Photographer & Artist","address":{"@type":"PostalAddress","addressLocality":"Innsbruck","addressRegion":"Tyrol","addressCountry":"AT"},"sameAs":["https://www.instagram.com/juergennigg/","https://www.behance.net/jrgennigg","https://www.linkedin.com/in/juergennigg"]}</script>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo-white.png" alt="yooneek" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">Portfolio</a>
-                <a href="wallpapers.html" class="nav-link nav-link-cta">
-                    <i class="fas fa-download"></i> Wallpapers
-                </a>
-                <a href="blog.html" class="nav-link">Blog</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="hero-badge">Fotografie &amp; Artwork</span>
-            <h1>Licht. Schatten. Gefühl.</h1>
-            <p class="hero-sub">Jürgen Nigg — Innsbruck, Austria</p>
-            <a href="#works" class="hero-cta">
-                Portfolio ansehen <i class="fas fa-arrow-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid -->
-    <section class="portfolio-section" id="works">
-        <div class="container">
-            <div class="masonry-grid" id="portfolio-grid"></div>
-            <div class="load-more-container">
-                <button class="btn-load-more" id="load-more-btn">Load More</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
-        <button class="lightbox-prev"  id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-next"  id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-        <div class="lightbox-content">
-            <img src="" alt="" id="lightbox-img">
-            <div class="lightbox-info">
-                <p id="lightbox-subtitle"></p>
-                <h3 id="lightbox-title"></h3>
-                <div id="lightbox-meta"></div>
-                <div class="lightbox-divider"></div>
-                <p id="lightbox-description"></p>
-            </div>
+<nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo-white.png" alt="Jürgen Nigg" class="logo-img" width="120" height="38" fetchpriority="high">
+        </a>
+        <div class="nav-links">
+            <a href="index.html"      class="nav-link active">Portfolio</a>
+            <a href="wallpapers.html" class="nav-link nav-link-cta"><i class="fas fa-download" aria-hidden="true"></i> Wallpapers</a>
+            <a href="blog.html"       class="nav-link">Blog</a>
         </div>
     </div>
+</nav>
 
-    <!-- Social Sidebar — fixed, immer sichtbar -->
-    <div class="social-sidebar">
-        <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.behance.net/jrgennigg"       target="_blank" rel="noopener noreferrer" class="social-icon" title="Behance"><i class="fab fa-behance"></i></a>
-        <a href="https://www.linkedin.com/in/juergennigg" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">Fotografie &amp; Artwork</span>
+        <h1>Licht. Schatten. Gefühl.</h1>
+        <p class="hero-sub">Jürgen Nigg — Innsbruck, Austria</p>
+        <a href="#works" class="hero-cta">Portfolio ansehen <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
     </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p id="contact-mail"></p>
-        <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
-    </footer>
+<section class="portfolio-section" id="works">
+    <div class="container">
+        <div class="filter-bar" role="group" aria-label="Portfolio filtern">
+            <button class="filter-btn active" data-cat="alle">Alle</button>
+            <button class="filter-btn" data-cat="artwork">Artwork</button>
+            <button class="filter-btn" data-cat="fashion">Fashion</button>
+            <button class="filter-btn" data-cat="portrait">Portrait</button>
+            <button class="filter-btn" data-cat="reise">Reise</button>
+            <button class="filter-btn" data-cat="landschaft">Landschaft</button>
+            <button class="filter-btn" data-cat="sport">Sport</button>
+        </div>
+        <div class="masonry-grid" id="portfolio-grid"></div>
+        <div class="load-more-container">
+            <button class="btn-load-more" id="load-more-btn">Load More</button>
+        </div>
+    </div>
+</section>
 
-    <script>
-        // E-Mail bot-geschützt
-        (function(){
-            var u='hello',d='juergennigg.com',el=document.getElementById('contact-mail');
-            if(!el)return;
-            var a=document.createElement('a');
-            a.href='mailto:'+u+'@'+d;
-            a.textContent=u+'@'+d;
-            el.appendChild(a);
-        })();
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bild-Detailansicht">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Schließen"><i class="fas fa-times" aria-hidden="true"></i></button>
+    <button class="lightbox-prev"  id="lightbox-prev"  aria-label="Vorheriges Bild"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="lightbox-next"  id="lightbox-next"  aria-label="Nächstes Bild"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img" decoding="async">
+        <div class="lightbox-info">
+            <p id="lightbox-subtitle"></p>
+            <h3 id="lightbox-title"></h3>
+            <div id="lightbox-meta"></div>
+            <div class="lightbox-divider"></div>
+            <p id="lightbox-description"></p>
+        </div>
+    </div>
+</div>
 
-        // Social Sidebar: nie den Footer überlappen
-        (function(){
-            var sidebar = document.querySelector('.social-sidebar');
-            var footer  = document.querySelector('.footer');
-            if(!sidebar || !footer) return;
-            function adjustSidebar(){
-                var footerTop = footer.getBoundingClientRect().top;
-                var winH      = window.innerHeight;
-                var sidebarH  = sidebar.offsetHeight;
-                var gap       = 24; // px Abstand zur Linie
-                if(footerTop < winH){
-                    // Footer ist sichtbar — Icons nach oben schieben
-                    var overlap = winH - footerTop;
-                    sidebar.style.bottom = (overlap + gap) + 'px';
-                } else {
-                    sidebar.style.bottom = '2rem';
-                }
-            }
-            window.addEventListener('scroll', adjustSidebar, {passive:true});
-            window.addEventListener('resize', adjustSidebar, {passive:true});
-            adjustSidebar();
-        })();
-    </script>
-    <script src="js/portfolio-data.js"></script>
-    <script src="js/main.js"></script>
+<div class="social-sidebar" aria-label="Social Media">
+    <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    <a href="https://www.behance.net/jrgennigg"       target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Behance"><i class="fab fa-behance" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/in/juergennigg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+</div>
+
+<footer class="footer">
+    <p id="contact-mail"></p>
+    <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="js/portfolio-data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
