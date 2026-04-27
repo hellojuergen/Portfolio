@@ -136,29 +136,44 @@ body {
     box-shadow: 0 10px 28px rgba(255,255,255,0.12);
 }
 
-/* ── FILTER BAR ─────────────────────────────────────────── */
+/* ── FILTER BAR — sticky unter der Nav ───────────────────── */
 
 .filter-bar {
+    position: sticky;
+    top: var(--nav-h);
+    z-index: 90;
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    padding: 2rem 0 1.5rem;
-    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.75rem 0;
+    margin: 0 -2rem;          /* bis zum Container-Rand */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none; /* IE */
+    flex-wrap: nowrap;
 }
+.filter-bar::-webkit-scrollbar { display: none; } /* Chrome/Safari */
 
 .filter-btn {
-    padding: 0.4rem 1.1rem;
+    padding: 0.38rem 1rem;
     background: transparent;
     color: var(--gray);
     border: 1px solid var(--border);
     border-radius: 50px;
     cursor: pointer;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.02em;
     transition: var(--transition);
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .filter-btn:hover {
@@ -175,7 +190,9 @@ body {
 /* ── PORTFOLIO SECTION ───────────────────────────────────── */
 
 .portfolio-section {
-    padding: 5rem 0 3rem;
+    padding: 0 0 3rem;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 3000px;
 }
 
 .masonry-grid {
@@ -183,6 +200,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 10px;
     gap: 14px;
+    padding-top: 1.5rem;
 }
 
 .grid-item {

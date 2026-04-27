@@ -50,11 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
             var prio    = eager ? ' fetchpriority="high"' : '';
             var decode  = ' decoding="' + (eager ? 'sync' : 'async') + '"';
 
+            var objPos = item.pos ? ' style="object-position:' + item.pos + '"' : '';
             el.innerHTML =
                 '<img src="' + esc(item.image) + '"'
                 + ' alt="' + esc(item.title) + ' – Jürgen Nigg"'
                 + ' loading="' + loading + '"'
-                + prio + decode + '>'
+                + prio + decode + objPos + '>'
                 + '<div class="grid-item-overlay">'
                 + '<p class="grid-item-sub">'  + esc(item.subtitle) + '</p>'
                 + '<h3 class="grid-item-title">' + esc(item.title) + '</h3>'
