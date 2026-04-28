@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function getFiltered() {
-        return activeFilter === 'alle'
+        return activeFilter === 'alle' || activeFilter === 'all'
             ? portfolioItems
             : portfolioItems.filter(function (i) { return i.cat === activeFilter; });
     }
