@@ -43,7 +43,10 @@
         <a href="index.html" class="nav-logo">
             <img src="assets/img/logo-white.png" alt="Jürgen Nigg" class="logo-img" width="120" height="38" fetchpriority="high">
         </a>
-        <div class="nav-links">
+        <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="index.html"      class="nav-link active">Portfolio</a>
             <a href="wallpapers.html" class="nav-link nav-link-cta"><i class="fas fa-download" aria-hidden="true"></i> Wallpapers</a>
             <a href="blog.html"       class="nav-link">Blog</a>
@@ -64,10 +67,10 @@
     <div class="container">
         <div class="filter-bar" role="group" aria-label="Portfolio filtern">
             <button class="filter-btn active" data-cat="alle">Alle</button>
-            <button class="filter-btn" data-cat="artwork">Artwork</button>
-            <button class="filter-btn" data-cat="portrait">Portrait</button>
-            <button class="filter-btn" data-cat="reise">Reise</button>
-            <button class="filter-btn" data-cat="landschaft">Landschaft</button>
+            <button class="filter-btn" data-cat="art">Art</button>
+            <button class="filter-btn" data-cat="people">People</button>
+            <button class="filter-btn" data-cat="documentary">Documentary</button>
+            <button class="filter-btn" data-cat="landscape">Landscape</button>
             <button class="filter-btn" data-cat="sport">Sport</button>
         </div>
         <div class="masonry-grid" id="portfolio-grid"></div>

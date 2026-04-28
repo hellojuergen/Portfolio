@@ -155,6 +155,36 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'ArrowRight') nextItem();
     });
 
+    // ── Burger Menü ──────────────────────────────────────────
+    var burger   = document.getElementById('nav-burger');
+    var navLinks = document.getElementById('nav-links');
+    if (burger && navLinks) {
+        burger.addEventListener('click', function () {
+            var open = navLinks.classList.toggle('is-open');
+            burger.classList.toggle('is-open', open);
+            burger.setAttribute('aria-expanded', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        // Menü schließen beim Klick auf einen Link
+        navLinks.querySelectorAll('.nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('is-open');
+                burger.classList.remove('is-open');
+                burger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+        // Menü schließen bei Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+                navLinks.classList.remove('is-open');
+                burger.classList.remove('is-open');
+                burger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
     // ── Smooth scroll ────────────────────────────────────────
     document.querySelectorAll('a[href="#works"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
