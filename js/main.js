@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var filterBtns  = document.querySelectorAll('.filter-btn');
     var lightbox    = document.getElementById('lightbox');
 
-    var activeFilter = 'alle';
+    var activeFilter = 'all';
     var displayed    = 18;
     var current      = 0;
     var filtered     = [];
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function getFiltered() {
-        return activeFilter === 'alle' || activeFilter === 'all'
+        return activeFilter === 'all'
             ? portfolioItems
             : portfolioItems.filter(function (i) { return i.cat === activeFilter; });
     }
