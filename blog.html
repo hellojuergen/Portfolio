@@ -3,133 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction – Jürgen Nigg</title>
+    <title>Journal – Jürgen Nigg | Field Notes, Hindsight &amp; Filme</title>
+    <meta name="description" content="Hinter den Bildern: Field Notes, Hindsights und Filme von Jürgen Nigg, Innsbruck – synchron zu Instagram.">
+    <meta name="author" content="Jürgen Nigg">
+    <link rel="canonical" href="https://juergennigg.com/blog.html">
+    <meta property="og:type"  content="website">
+    <meta property="og:title" content="Journal – Jürgen Nigg">
+    <meta property="og:url"   content="https://juergennigg.com/blog.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            overflow: hidden;
-        }
-
-        /* subtiler Hintergrund */
-        body::before {
-            content: '';
-            position: fixed; inset: 0;
-            background: radial-gradient(ellipse at 50% 40%, rgba(255,255,255,0.04) 0%, transparent 65%);
-            pointer-events: none;
-        }
-
-        .uc-logo {
-            margin-bottom: 3rem;
-        }
-        .uc-logo img {
-            height: 36px; width: auto; opacity: 0.9;
-        }
-
-        .uc-badge {
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border: 1px solid rgba(255,255,255,0.14);
-            border-radius: 50px;
-            font-size: 0.7rem;
-            letter-spacing: 0.12em;
-            color: #888;
-            text-transform: uppercase;
-            margin-bottom: 1.8rem;
-        }
-
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 3.5rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, #666 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        p {
-            color: #666;
-            font-size: 0.95rem;
-            font-weight: 300;
-            line-height: 1.7;
-            max-width: 420px;
-            margin-bottom: 2.5rem;
-        }
-
-        .uc-back {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            padding: 0.75rem 1.8rem;
-            background: #fff; color: #0a0a0a;
-            border-radius: 50px;
-            font-weight: 600; font-size: 0.88rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .uc-back:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(255,255,255,0.12);
-        }
-
-        .uc-socials {
-            position: fixed;
-            left: 1.5rem; bottom: 2rem;
-            display: flex; flex-direction: column; gap: 0.6rem;
-        }
-        .uc-social-icon {
-            width: 40px; height: 40px;
-            background: rgba(255,255,255,0.07);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .uc-social-icon:hover {
-            background: #fff; color: #0a0a0a;
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
 
-    <div class="uc-logo">
-        <a href="index.html">
-            <img src="assets/img/logo-white.png" alt="yooneek">
+<nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/img/logo-white.png" alt="Jürgen Nigg" class="logo-img" width="120" height="38">
         </a>
+        <button class="nav-burger" id="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html"      class="nav-link">Portfolio</a>
+            <a href="wallpapers.html" class="nav-link nav-link-cta"><i class="fas fa-download" aria-hidden="true"></i> Wallpapers</a>
+            <a href="blog.html"       class="nav-link active">Blog</a>
+        </div>
     </div>
+</nav>
 
-    <span class="uc-badge">Coming Soon</span>
-
-    <h1>Under Construction.</h1>
-
-    <p>Diese Seite entsteht gerade.<br>Das Portfolio und die Wallpapers sind bereits verfügbar.</p>
-
-    <a href="index.html" class="uc-back">
-        <i class="fas fa-arrow-left"></i> Zurück zum Portfolio
-    </a>
-
-    <div class="uc-socials">
-        <a href="https://www.instagram.com/juergennigg/" target="_blank" rel="noopener noreferrer" class="uc-social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.behance.net/jrgennigg"       target="_blank" rel="noopener noreferrer" class="uc-social-icon" title="Behance"><i class="fab fa-behance"></i></a>
-        <a href="https://www.linkedin.com/in/juergennigg" target="_blank" rel="noopener noreferrer" class="uc-social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+<header class="bl-hero">
+    <span class="hero-badge">Journal</span>
+    <h1>From the archive, with notes.</h1>
+    <p class="bl-sub">Hinter den Bildern – Field Notes, Hindsights und Filme. Ein Eintrag zu jedem Instagram-Post.</p>
+    <div class="bl-tabs" role="tablist">
+        <a href="#journal" class="bl-tab">Journal</a>
+        <a href="#films" class="bl-tab">Filme</a>
     </div>
+</header>
 
+<main>
+    <section class="bl-section" id="journal">
+        <div class="bl-list" id="bl-list"></div>
+        <p class="bl-empty" id="bl-empty" hidden>Der erste Eintrag erscheint bald.</p>
+    </section>
+
+    <section class="bl-section" id="films">
+        <h2 class="bl-h2">Filme</h2>
+        <p class="bl-h2-sub">Aus der Freeski-Zeit – geschnitten von mir.</p>
+        <div class="bl-films" id="bl-films"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Jürgen Nigg. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script src="js/blog-data.js"></script>
+<script src="js/blog.js"></script>
 </body>
 </html>
