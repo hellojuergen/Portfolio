@@ -2,58 +2,11 @@
 // Einträge erscheinen automatisch ab ihrem Datum (siehe js/blog.js).
 var journal = [
  {
-  "date": "2026-11-18",
-  "slug": "snowfest",
-  "title": "Snowfest Innsbruck, November 2022 – the first edition.",
-  "text": [
-   "Rails in front of the Landestheater, day into night.",
-   "Edition five: 20–22 Nov 2026, Landestheater."
-  ],
-  "img": "assets/img/blog/2026-11-18-snowfest.jpg",
-  "alt": "Low-angle close-up of a freeskier sliding a handrail down the stair setup in front of the Landestheater Innsbruck.",
-  "tags": "#snowfest #innsbruck #freeski #rockarail #skiphotography",
-  "fieldNote": {
-   "no": 1,
-   "cat": "EDITING",
-   "head": "Pick a mood. Commit.",
-   "body": "Warm reads as memory, cool as cold and clean. Set white balance once, then sync it across every frame in the set.",
-   "chips": [
-    "WARM ≈ 6000 K",
-    "COOL ≈ 4300 K",
-    "SYNC ALL"
-   ]
-  }
- },
- {
-  "date": "2026-11-20",
-  "slug": "riezergriesskogel",
-  "title": "Riezer Grießkogel, Tyrol – October.",
-  "text": [
-   "Alpine lake, first snow on the ridge, late autumn light.",
-   "Light: early morning, no wind – the lake works as a mirror."
-  ],
-  "img": "assets/img/blog/2026-11-20-riezergriesskogel.jpg",
-  "alt": "Alpine lake mirroring a dark ridge with first snow, golden autumn grass in front.",
-  "tags": "#tirol #alpinelake #autumninthealps #mountainphotography",
-  "fieldNote": {
-   "no": 2,
-   "cat": "LANDSCAPE",
-   "head": "Mirror lake? Go early. Go low.",
-   "body": "Wind usually builds by late morning. Lens close to the water = bigger reflection. Polarizer: turn it until the reflection gets stronger.",
-   "chips": [
-    "BEFORE 9 AM",
-    "LENS LOW",
-    "CHECK CPL"
-   ]
-  }
- },
- {
   "date": "2026-11-25",
   "slug": "xgames-norway",
   "title": "X Games Norway, Big Air – August 2019.",
   "text": [
-   "No flash, almost no light. Every usable frame was lit by someone else's flash – and the iPad didn't make it either.",
-   "Big Air returns to Innsbruck: AIRDRENALINE, Bergisel, 27–28 Nov."
+   "No flash, almost no light – every usable frame was lit by someone else's flash."
   ],
   "img": "assets/img/blog/2026-11-25-xgames-norway.jpg",
   "alt": "Dark hall, lit wooden kicker with X Games logo, a rider small in the air above.",
@@ -81,13 +34,59 @@ var journal = [
   }
  },
  {
-  "date": "2026-11-30",
+  "date": "2026-11-27",
+  "slug": "snowfest",
+  "title": "Snowfest Innsbruck, November 2022 – the first edition.",
+  "text": [
+   "Rails in front of the Landestheater, day into night.",
+   "This year: edition five."
+  ],
+  "img": "assets/img/blog/2026-11-27-snowfest.jpg",
+  "alt": "Low-angle close-up of a freeskier sliding a handrail down the stair setup in front of the Landestheater Innsbruck.",
+  "tags": "#snowfest #innsbruck #freeski #rockarail #skiphotography",
+  "fieldNote": {
+   "no": 1,
+   "cat": "EDITING",
+   "head": "Pick a mood. Commit.",
+   "body": "Warm reads as memory, cool as cold and clean. Set white balance once, then sync it across every frame in the set.",
+   "chips": [
+    "WARM ≈ 6000 K",
+    "COOL ≈ 4300 K",
+    "SYNC ALL"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-02",
+  "slug": "riezergriesskogel",
+  "title": "Riezer Grießkogel, Tyrol – October.",
+  "text": [
+   "Alpine lake, first snow on the ridge, late autumn light.",
+   "Light: early morning, no wind – the lake works as a mirror."
+  ],
+  "img": "assets/img/blog/2026-12-02-riezergriesskogel.jpg",
+  "alt": "Alpine lake mirroring a dark ridge with first snow, golden autumn grass in front.",
+  "tags": "#tirol #alpinelake #autumninthealps #mountainphotography",
+  "fieldNote": {
+   "no": 2,
+   "cat": "LANDSCAPE",
+   "head": "Mirror lake? Go early. Go low.",
+   "body": "Wind usually builds by late morning. Lens close to the water = bigger reflection. Polarizer: turn it until the reflection gets stronger.",
+   "chips": [
+    "BEFORE 9 AM",
+    "LENS LOW",
+    "CHECK CPL"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-04",
   "slug": "onceupon-kto",
   "title": "Once upon a time: KTO 23 – the last Kaunertal Opening as we knew it.",
   "text": [
    "Rails, tubes and the first park session of the season. Since 2024 the park opens in spring instead."
   ],
-  "img": "assets/img/blog/2026-11-30-onceupon-kto.jpg",
+  "img": "assets/img/blog/2026-12-04-onceupon-kto.jpg",
   "alt": "Snowboarder sliding a pink-and-white tube, white snow and sky around.",
   "tags": "#kaunertal #snowpark #snowboarding #tirol #onceupon",
   "fieldNote": {
@@ -99,27 +98,6 @@ var journal = [
     "PRE-FOCUS",
     "AF LOCK",
     "BURST"
-   ]
-  }
- },
- {
-  "date": "2026-12-03",
-  "slug": "aster-innbeach",
-  "title": "Aster – outdoor product shoot on the Inn river, Innsbruck.",
-  "text": [
-   "Leather totes in natural evening light."
-  ],
-  "img": "assets/img/blog/2026-12-03-aster-innbeach.jpg",
-  "alt": "Woman in a long brown dress on the gravel bank of the Inn, holding an orange leather tote.",
-  "tags": "#productphotography #commercialphotography #innsbruck #leatherbags",
-  "fieldNote": {
-   "no": 5,
-   "cat": "PRODUCT",
-   "head": "Shoot the product where it lives.",
-   "body": "The location tells the story, the product stays the hero. Golden hour backlight, one calm background.",
-   "chips": [
-    "GOLDEN HOUR",
-    "BACKLIGHT"
    ]
   }
  },
@@ -175,6 +153,60 @@ var journal = [
     "36 FRAMES",
     "NO CHIMPING",
     "DECIDE FIRST"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-18",
+  "slug": "aster-innbeach",
+  "title": "Aster – outdoor product shoot on the Inn river, Innsbruck.",
+  "text": [
+   "Leather totes in natural evening light."
+  ],
+  "img": "assets/img/blog/2026-12-18-aster-innbeach.jpg",
+  "alt": "Woman in a long brown dress on the gravel bank of the Inn, holding an orange leather tote.",
+  "tags": "#productphotography #commercialphotography #innsbruck #leatherbags",
+  "fieldNote": {
+   "no": 5,
+   "cat": "PRODUCT",
+   "head": "Shoot the product where it lives.",
+   "body": "The location tells the story, the product stays the hero. Golden hour backlight, one calm background.",
+   "chips": [
+    "GOLDEN HOUR",
+    "BACKLIGHT"
+   ]
+  }
+ },
+ {
+  "date": "2026-12-23",
+  "slug": "ranggerkoepfl",
+  "title": "Rangger Köpfl – 2018 and 2022. Same mountain, different light.",
+  "text": [
+   "Above the Inn valley in late August 2022; the last frame is from May 2018."
+  ],
+  "img": "assets/img/blog/2026-12-23-ranggerkoepfl.jpg",
+  "alt": "Inn valley seen from Rangger Köpfl in late-summer light, villages and fields far below.",
+  "tags": ""
+ },
+ {
+  "date": "2026-12-30",
+  "slug": "lizumnight",
+  "title": "Once upon: Axamer Lizum at night, August 2017.",
+  "text": [
+   "A summit cross under the stars."
+  ],
+  "img": "assets/img/blog/2026-12-30-lizumnight.jpg",
+  "alt": "Wooden summit cross lit warm against a dense starry night sky.",
+  "tags": "",
+  "fieldNote": {
+   "no": 8,
+   "cat": "NIGHT",
+   "head": "Stars? Keep it under 20 seconds.",
+   "body": "Wide lens, wide open, ISO 3200. At wide angles, longer than ~20 s and the stars start to trail. Focus manually on the brightest star.",
+   "chips": [
+    "≤ 20 S",
+    "WIDE OPEN",
+    "MANUAL FOCUS"
    ]
   }
  }
