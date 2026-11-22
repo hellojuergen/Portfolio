@@ -276,3 +276,6 @@
 @media (max-width: 380px) {
     .wp-grid { grid-template-columns: 1fr; }
 }
+
+/* Download-Zähler ausgeblendet (zählte nur lokal pro Browser) */
+.wp-dl-count{display:none!important}
